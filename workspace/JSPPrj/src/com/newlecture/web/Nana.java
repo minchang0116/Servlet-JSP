@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 public class Nana extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
 		String cnt_ = request.getParameter("cnt");
@@ -24,7 +22,7 @@ public class Nana extends HttpServlet {
 			cnt = Integer.parseInt(cnt_);
 		
 		for(int i=0; i<cnt; i++) {
-			out.println((i+1)+": ¾È³ç Servlet!!<br >");
+			out.println((i+1)+": ì•ˆë…• Servlet!!<br >");
 		}
 	}
 }
